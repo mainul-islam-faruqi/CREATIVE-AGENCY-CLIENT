@@ -1,0 +1,13 @@
+.App{
+  font-family: 'Poppins';
+}
+
+.button-primary{
+  background-color: #20232A;
+  width: 8rem;
+  height: 2.5rem;
+  text-align: center;
+  border-radius: 5px;
+  color: white !important;
+  text-decoration: none;
+}

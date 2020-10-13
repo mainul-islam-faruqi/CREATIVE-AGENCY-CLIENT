@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Shared/Navbar/Navbar';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import Home from './components/Home/Home';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route>
-            <Navbar />
+          <Route path="/">
+            <Home/>
           </Route>
         </Switch>
       </Router>

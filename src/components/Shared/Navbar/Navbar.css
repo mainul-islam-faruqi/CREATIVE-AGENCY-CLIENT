@@ -1,0 +1,5 @@
+@media only screen and (max-width: 992px) {
+    ul > li{
+        margin-top: 10px;
+    }
+  }

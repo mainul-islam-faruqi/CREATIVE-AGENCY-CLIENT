@@ -8,7 +8,7 @@ import airbnb from '../../../images/logos/airbnb.png';
 const ImageRow = () => {
     return (
         <section className="container-fluid mt-sm-0 pt-lg-5 mt-xl-5 mb-5">
-        <div className="row d-flex align-items-center justify-content-center mt-xl-5 image-row">
+        <div className="row d-flex align-items-center justify-content-center  image-row">
             <div className="col-md-2 col-sm-2">
                 <img  className="img-fluid w-75  " src={slack} alt=""/>
             </div>

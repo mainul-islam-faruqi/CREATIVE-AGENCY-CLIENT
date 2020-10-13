@@ -1,0 +1,58 @@
+
+.header::after{
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    transform: skewY(-7.0deg);
+    transform-origin: 0 100%;
+    z-index: -1;
+    background-color:  #FBD062;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .header{
+      padding: 0 100px;
+    }
+  }
+
+  @media screen and (max-width: 767px) , screen and (max-height: 700px) {
+    .header::after{
+        height: 800px;
+    }
+  }
+
+  @media screen and (min-width: 768px) , screen and (max-height: 700px) {
+    .header::after{
+        height: 650px;
+    }
+  }
+
+  @media screen and (min-width: 968px) , screen and (max-height: 700px) {
+    .header::after{
+        height: 700px;
+    }
+  }
+
+  @media screen and (min-width: 1140px) , screen and (max-height: 700px) {
+    .header::after{
+        height: 750px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) , screen and (max-height: 700px) {
+    .header::after{
+        height: 800px;
+    }
+  }
+
+  @media screen and (min-width: 1540px) , screen and (max-height: 700px) {
+    .header::after{
+        height: 880px;
+    }
+  }

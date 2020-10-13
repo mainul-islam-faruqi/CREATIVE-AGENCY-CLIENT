@@ -2,6 +2,11 @@
   font-family: 'Poppins';
 }
 
+.text-brand{
+  color: #20232A;
+  font-weight: 900 ;
+}
+
 .button-primary{
   background-color: #20232A;
   width: 8rem;
@@ -11,3 +16,5 @@
   color: white !important;
   text-decoration: none;
 }
+
+

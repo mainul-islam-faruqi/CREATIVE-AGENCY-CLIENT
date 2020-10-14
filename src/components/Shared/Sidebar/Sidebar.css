@@ -10,10 +10,38 @@
     margin: 40px 0 0 12px;
 }
 
-.sidebar-option > h6{
+.sidebar-link{
+    color: #282c34;
+    text-decoration: none !important;
+}
+
+.sidebar-link:hover{
+    color: #279c5e;
+}
+
+.sidebar-link:active{
+    color: ;
+    font-weight: 700 ;
+}
+
+.active{
+    color: #009444;
+}
+
+
+.sidebar-link > h6{
+    font-weight: 700 ;
     margin: 20px 0;
 }
 
+
 h6 > img {
     margin-right: 8px;
+}
+
+
+
+
+.sidebar-option h6 > img {
+    width: 20px;
 }

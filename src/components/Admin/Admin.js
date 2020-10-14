@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../Shared/Sidebar/Sidebar';
 import './Admin.css';
 
+
 const Admin = () => {
     return (
         <div className="admin">

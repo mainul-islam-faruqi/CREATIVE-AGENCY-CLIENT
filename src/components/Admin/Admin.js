@@ -5,10 +5,13 @@ import './Admin.css';
 
 const Admin = () => {
     return (
-        <div className="admin">
-            <div className="header-option d-flex">
-                <Sidebar/>
-                <h3>  Add Services </h3>
+        <div className="admin d-flex pt-4">
+            <Sidebar/>
+            <div className="header-option ">
+                <h3> Add Service </h3>
+            </div>
+            <div className="rightOption">
+
             </div>
         </div>
     );

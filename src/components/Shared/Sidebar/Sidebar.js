@@ -17,9 +17,7 @@ const Sidebar = ( ) => {
                 <NavLink to="serviceList"  activeClassName="active" className="sidebar-link"> <h6> <img src={serviceListIcon} alt=""/>  Services list </h6> </NavLink>
                 <NavLink to="addService"  activeClassName="active" className="sidebar-link"> <h6> <img src={plusIcon} alt=""/>  Add Service </h6> </NavLink>
                 <NavLink to="makeAdmin" activeClassName="active" className="sidebar-link"> <h6> <img src={personIcon} alt=""/>  Make Admin </h6> </NavLink>
-                
             </div>
-
         </section>
     );
 };

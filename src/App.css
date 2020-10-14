@@ -2,9 +2,18 @@
   font-family: 'Poppins';
 }
 
+.logo > img{
+  width: 150px;
+  height: 47px;
+}
+
 .text-brand{
   color: #20232A;
   font-weight: 900 ;
+}
+
+.text-green{
+  color: #009444;
 }
 
 .button-primary{
@@ -26,9 +35,10 @@
   }
 }
 
+
 @media screen and (min-width: 218px) , screen and (max-height: 700px) {
-  .header{
-    height: 900px;
+  .header::after{
+    height: 760px !important;
   }
   .image-row > div{
     display: flex;
@@ -49,7 +59,7 @@
 
 @media screen and (min-width: 767px) , screen and (max-height: 700px) {
   .header::after{
-      height: 800px;
+      height: 700px;
   }
 
   .header{
@@ -75,7 +85,7 @@
 
 
   .image-row{
-    margin-top: -20px;
+    margin-top: -50px;
   }
 
   
@@ -86,10 +96,11 @@
       height: 750px;
   }
 
-
   .image-row{
-    margin-bottom: -100px;
+    margin-top: -50px;
   }
+
+  
 }
 
 @media screen and (min-width: 1440px) , screen and (max-height: 700px) {
@@ -98,7 +109,7 @@
   }
 
   .image-row{
-    margin-top: -100px;
+    margin-top: -130px;
   }
 }
 

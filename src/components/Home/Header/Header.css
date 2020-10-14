@@ -1,4 +1,5 @@
 
+
 .header::after{
     content: '';
     top: 0;
@@ -8,7 +9,7 @@
     display: block;
     height: 100%;
     position: absolute;
-    transform: skewY(-7.0deg);
+    transform: skewY(-7.5deg);
     transform-origin: 0 100%;
     z-index: -1;
     background-color:  #FBD062;

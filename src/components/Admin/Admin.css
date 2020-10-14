@@ -1,16 +1,14 @@
 .header-option {
     background-color: white;
-    height: 60px;
+    height: 20px;
     width: 100%;
+    margin-bottom: 40px;
 }
 
-.right-side{
-    width: 100%;
-}
 
 .rightOption{
     background-color: #F4F7FC;
-    width: 100%;
     min-height: 90vh;
     flex: 1;
+    padding-top: 20px;
 }

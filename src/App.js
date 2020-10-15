@@ -8,12 +8,17 @@ import {
 import Home from './components/Home/Home';
 import Admin from './components/Admin/Admin';
 import AddService from './components/Admin/AddService/AddService';
+import Order from './components/OrderPage/Order/Order';
 
 function App() {
   return (
     <div className="App ">
       <Router>
         <Switch>
+
+          <Route path="/order" >
+            <Order/>
+          </Route>
 
           <Route path="/addService">
             <AddService/>

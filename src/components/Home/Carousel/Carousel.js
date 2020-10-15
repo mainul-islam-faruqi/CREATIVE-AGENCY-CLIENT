@@ -10,34 +10,34 @@ const Carousel = () => {
     return (
         <div>
             <div id="carouselExampleIndicators" className="carousel slide py-5 my-5" style={{ background: "#111430" }} data-ride="carousel">
-           <h3 style={{fontSize: "2.2rem"}} className="text-center text-white font-weight-bold mb-5 mt-3" > Provide awesome <p className="text-green font-weight-bold d-inline"> services </p> </h3>
-            
+                <h3 style={{ fontSize: "2.2rem" }} className="text-center text-white font-weight-bold mb-5 mt-3" > Provide awesome <p className="text-green font-weight-bold d-inline"> services </p> </h3>
+
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active "></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1" ></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2" ></li>
                 </ol>
-                <div className="carousel-inner mb-5" style={{maxHeight:" 400px"}}>
+                <div className="carousel-inner mb-5" style={{ maxHeight: " 400px" }}>
                     <div className="carousel-item active">
-                    <div className="d-flex">
-                        <img src={slider1} className="d-inline-block " style={{ width: "40%",height: "220px" }} alt="..." />
-                        <img src={slider2} className="d-inline-block ml-4 " style={{ width: "40%" ,height: "220px" }} alt="..." />
-                        <img src={slider3} className="d-inline-block ml-4" style={{ width: "40%",height: "220px" }} alt="..." />
+                        <div className="d-flex">
+                            <img src={slider1} className="d-inline-block " style={{ width: "40%", height: "220px" }} alt="..." />
+                            <img src={slider2} className="d-inline-block ml-4 " style={{ width: "40%", height: "220px" }} alt="..." />
+                            <img src={slider3} className="d-inline-block ml-4" style={{ width: "40%", height: "220px" }} alt="..." />
                         </div>
                     </div>
                     <div className="carousel-item ">
                         <div className="d-flex">
-                        <img src={slider3} className="d-inline-block " style={{ width: "40%",height: "220px" }} alt="..." />
-                        <img src={slider4} className="d-inline-block ml-4 " style={{ width: "40%",height: "220px" }} alt="..." />
-                        <img src={slider5} className="d-inline-block ml-4" style={{ width: "40%",height: "220px" }} alt="..." />
+                            <img src={slider3} className="d-inline-block " style={{ width: "40%", height: "220px" }} alt="..." />
+                            <img src={slider4} className="d-inline-block ml-4 " style={{ width: "40%", height: "220px" }} alt="..." />
+                            <img src={slider5} className="d-inline-block ml-4" style={{ width: "40%", height: "220px" }} alt="..." />
                         </div>
-                        
+
                     </div>
                     <div className="carousel-item ">
-                    <div className="d-flex">
-                        <img src={slider5} className="d-inline-block " style={{ width: "40%",height: "220px" }} alt="..." />
-                        <img src={slider1} className="d-inline-block ml-4 " style={{ width: "40%",height: "220px" }} alt="..." />
-                        <img src={slider2} className="d-inline-block ml-4" style={{ width: "40%",height: "220px" }} alt="..." />
+                        <div className="d-flex">
+                            <img src={slider5} className="d-inline-block " style={{ width: "40%", height: "220px" }} alt="..." />
+                            <img src={slider1} className="d-inline-block ml-4 " style={{ width: "40%", height: "220px" }} alt="..." />
+                            <img src={slider2} className="d-inline-block ml-4" style={{ width: "40%", height: "220px" }} alt="..." />
                         </div>
                     </div>
                 </div>

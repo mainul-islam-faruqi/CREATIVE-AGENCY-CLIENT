@@ -1,3 +1,4 @@
+
 .form {
     height: 305px;
     background-color: white;
@@ -29,6 +30,23 @@
 input::placeholder{
     color: #c9c9c9;
 }
+
+
+.formLeft > textarea{
+    width: 100%;
+    padding-left: 15px;
+    padding-top: 8px;
+    outline-width: 0;
+    border: 0.666667px solid #ececec;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+textarea::placeholder{
+    color: #c9c9c9;
+}
+
+
 
 .formRight{
     width: 50%;
@@ -93,16 +111,7 @@ visibility: hidden;
     text-align: center;
 }
 
-/* style={{
-                                    background: "#3F90FC",
-                                    height: "35px",
-                                    color: "white",
-                                    marginTop: "20px",
-                                    paddingBottom: "5px",
-                                    fontSize: "1.2rem",
-                                    borderRadius: "5px",
-                                    
-                                }} */
+
 
 
 

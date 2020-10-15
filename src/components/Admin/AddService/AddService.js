@@ -1,55 +1,45 @@
 import React, { useState } from 'react';
 import './AddService.css';
+import Sidebar from '../../Shared/Sidebar/Sidebar';
+import uploadIcon from '../../../images/icons/upload.png';
 import { useHistory } from 'react-router-dom';
-import Sidebar from '../Shared/Sidebar/Sidebar';
-import uploadIcon from '../../images/icons/upload.png';
 
 const AddService = () => {
-
-
-
-
     const history = useHistory();
+    const [info, setInfo] = useState({});
+    const [file, setFile] = useState(null);
 
-    const [event, setEvent] = useState({
-        name: '',
-        description: '',
-        date: '',
-        success: '',
-        pic: 'riverClean',
-    });
-    const [selectedFile, setSelectedFile] = useState(null);
 
     const handleChange = (e) => {
-        const newEventInfo = { ...event };
-        newEventInfo[e.target.name] = e.target.value;
-        setEvent(newEventInfo);
+        const newInfo = { ...info };
+        newInfo[e.target.name] = e.target.value;
+        setInfo(newInfo);
     };
 
-
-
-    const handleEvent = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        const eventInfo = { ...event, ...selectedFile };
-        fetch('https://secret-wildwood-13220.herokuapp.com/addEvent', {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('title', info.title);
+        formData.append('description', info.description);
+
+        fetch('http://localhost:5000/addService', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(eventInfo)
+            body: formData
         })
-            .then(res => res.json())
-            .then(data => {
-                event.success = "Registration Successful"
-                setEvent(eventInfo);
-                history.push('/')
-            })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            history.push('/')
+        })
+        .catch(err => console.log(err))
     }
 
-
-
+    console.log(info, file);
 
 
     return (
-        <div className="container-fluid"> 
+        <div className="addService  container-fluid pr-0 "> 
             <div className="addService row pt-4">
             <div className="col-md-3">
                 <Sidebar />
@@ -57,7 +47,7 @@ const AddService = () => {
 
             <div className="col-md-9">
             
-                <div className="header-option ">
+                <div className="header-option ml-5">
                     <h3> Add Service </h3>
                 </div>
                 <div className="rightOption ">
@@ -66,49 +56,40 @@ const AddService = () => {
                 event.success ? <Alert severity="success"> Registration Successful — check it out!</Alert> : event.success = ""
             } */}
 
-                    <form onSubmit={handleEvent} className=" " action="" enctype="multipart/form-data">
+                    <form onSubmit={handleSubmit} className=" " action="" >
                         <div className="form">
                         <div className="formLeft">
                             <h5>Event Title </h5>
-                            <input type="text" name="name"
-
+                            <input type="text" name="title"
                                 placeholder="Enter title" id=""
                                 onChange={handleChange}
                             />
 
                             <h5> Description </h5>
-                            <input type="text" name="description"
+                            <textarea  type="text-area" name="description"
                                 placeholder="Enter Description " id=""
                                 onChange={handleChange}
-                                style={{ paddingBottom: " 90px", paddingTop: "15px" }}
+                                rows="4" cols="28"
                             />
                         </div>
 
                         <div className="formRight">
-                            {/* <h5>Event Date </h5>
-                            <input type="date" name="date"
-                                placeholder="Enter title" id=""
-                                onChange={handleChange}
-                                style={{ color: "#C9C9C9" }}
-                            /> */}
-
-
                             <h5> Icon </h5>
                             <div className="uploadFile">
                                 <input
                                     type="file"
                                     accept="image/*"
                                     className="custom-file-input"
-                                    onChange={(e) => setSelectedFile(e.target.files[0])}
+                                    onChange={(e) => setFile(e.target.files[0])}
                                 />
                                 <div id="uploadImageText"> <img className='uploadIcon' src={uploadIcon} alt="" /> Upload image </div>
                             </div>
                         </div>
                         </div>
 
-                        <div className="ml-auto w-25">
+                        <div className="ml-auto mr-5" style={{width: " 140px", }}>
                            <input
-                                    className="submit-button"
+                                    className="submit-button "
                                     type="submit"
                                     value="Submit"
 

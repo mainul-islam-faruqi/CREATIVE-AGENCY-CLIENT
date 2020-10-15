@@ -28,7 +28,7 @@
 }
 
 input::placeholder{
-    color: #c9c9c9;
+    color: #d8d8d8;
 }
 
 
@@ -43,7 +43,7 @@ input::placeholder{
 }
 
 textarea::placeholder{
-    color: #c9c9c9;
+    color: #d8d8d8;
 }
 
 
@@ -71,9 +71,8 @@ textarea::placeholder{
 }
 
 .uploadIcon{
-    position: absolute;
     width: 1.5rem;
-    left: 10px;
+    margin-right: 10px;
 }
 
 .custom-file-input {
@@ -88,14 +87,18 @@ visibility: hidden;
 #uploadImageText{
     position: absolute;
     left: 0;
+    top: 0;
     font-size: 1rem;
     font-weight: 900;
     color: #009444;
-    display: inline-block;
     background: #DEFFED;
     border: 1px solid ;
     border-radius: 5px;
-    padding: 7px 40px;
+    padding: 7px 0px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .submit-button{

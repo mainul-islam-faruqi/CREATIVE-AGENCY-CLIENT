@@ -1,0 +1,17 @@
+.order-form{
+    width: 70%;
+}
+
+.order-form input, textarea {
+    width: 90%;
+    height: 50px;
+    margin:  10px 30px;
+    padding-left: 15px;
+    outline-width: 0;
+    border: 0.666667px solid #ececec;
+    border-radius: 5px;
+}
+
+.order-form textarea{
+    height: 120px;
+}

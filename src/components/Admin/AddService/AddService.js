@@ -82,7 +82,7 @@ const AddService = () => {
                                     className="custom-file-input"
                                     onChange={(e) => setFile(e.target.files[0])}
                                 />
-                                <div id="uploadImageText"> <img className='uploadIcon' src={uploadIcon} alt="" /> Upload image </div>
+                                <div id="uploadImageText"> <img className='uploadIcon ' src={uploadIcon} alt="" />  <strong>Upload image</strong> </div>
                             </div>
                         </div>
                         </div>

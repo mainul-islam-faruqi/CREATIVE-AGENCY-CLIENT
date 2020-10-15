@@ -17,6 +17,11 @@
   color: #009444;
 }
 
+.text-light-dark{
+  color: #8f8f8f;
+}
+
+
 .button-primary{
   background-color: #20232A;
   width: 8rem;
@@ -94,7 +99,7 @@
 
 
   .image-row{
-    margin-top: 0px;
+    margin-top: -50px;
   }
 
   

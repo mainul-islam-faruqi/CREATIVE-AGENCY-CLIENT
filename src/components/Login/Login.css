@@ -1,0 +1,49 @@
+.login{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+.login-form {
+    width: 40rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #E5E5E5;
+}
+h2{
+    margin-bottom: 30px;
+}
+p{
+    font-size: 1.2rem;
+}
+
+.googleLogin{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #C7C7C7;
+    border-radius: 57px;
+    width: 30rem;
+    height: 45px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.googleLogin > p {
+    padding-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'roboto';
+}
+
+.googleLogo{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: .4rem;
+}

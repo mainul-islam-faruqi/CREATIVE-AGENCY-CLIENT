@@ -8,8 +8,6 @@ import uploadIcon from '../../../images/icons/upload.png';
 
 const Order = () => {
 
-
-
     const history = useHistory();
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
@@ -25,10 +23,13 @@ const Order = () => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('title', info.title);
+        formData.append('name', info.name);
+        formData.append('email', info.email);
+        formData.append('selectedServiceName', info.selectedServiceName);
         formData.append('description', info.description);
+        formData.append('price', info.price);
 
-        fetch('http://localhost:5000/', {
+        fetch('http://localhost:5000/placeOrder', {
             method: 'POST',
             body: formData
         })
@@ -85,7 +86,7 @@ const Order = () => {
 
 
                                     <div class=" form-group col mr-2">
-                                        <input type="text" class="" placeholder="Price" />
+                                        <input type="number" name="price"class="" placeholder="Price" />
                                     </div>
                                     <div class="col ml-2">
                                         <div className="uploadFile">

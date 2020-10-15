@@ -51,6 +51,10 @@
   .header::after{
     height: 760px !important;
   }
+  .header{
+    height: 800px !important;
+  }
+
   .image-row > div{
     display: flex;
     justify-content: center;
@@ -74,7 +78,7 @@
   }
 
   .header{
-    height: 700px;
+    height: 700px !important;
   }
 
   
@@ -87,7 +91,7 @@
   }
 
   .header{
-    height: 650px;
+    height: 700px !important;
   }
 
   
@@ -115,7 +119,7 @@
       height: 730px !important;
   }
   .header{
-    height: 750px;
+    height: 750px !important;
   }
 
 

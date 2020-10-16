@@ -30,7 +30,7 @@ const FeedBack = () => {
                                     <img src={review.picture} style={{ width: "64px", height: "64px" }} className="card-img-top rounded-circle" alt="..." />
 
                                     <div className="card-header-text">
-                                        <h5 style={{lineHeight: "5px"}} className="card-title text-brand"> {review.name} </h5>
+                                        <h5 style={{lineHeight: "5px"}} className="card-title "> {review.name} </h5>
                                         <strong > {review.companyName} </strong>
                                     </div>
                                     

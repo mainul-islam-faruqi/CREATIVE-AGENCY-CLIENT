@@ -14,7 +14,7 @@ const Sidebar = ( ) => {
             <NavLink  to="/" className="logo " > <img src={logo} alt="" /> </NavLink>
 
             <div className="sidebar-option" >
-                <NavLink to="serviceList"  activeClassName="active" className="sidebar-link"> <h6> <img src={serviceListIcon} alt=""/>  Services list </h6> </NavLink>
+                <NavLink to="admin"  activeClassName="active" className="sidebar-link"> <h6> <img src={serviceListIcon} alt=""/>  Services list </h6> </NavLink>
                 <NavLink to="addService"  activeClassName="active" className="sidebar-link"> <h6> <img src={plusIcon} alt=""/>  Add Service </h6> </NavLink>
                 <NavLink to="makeAdmin" activeClassName="active" className="sidebar-link"> <h6> <img src={personIcon} alt=""/>  Make Admin </h6> </NavLink>
             </div>

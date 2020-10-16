@@ -60,14 +60,17 @@ function App() {
             <Route  path="/review">
               <Review/>
             </Route>
+            
+            <Route path="/admin">
+              <Admin />
+            </Route>
 
             <Route path="/addService">
               <AddService />
             </Route>
 
-            <Route path="/admin">
-              <Admin />
-            </Route>
+            
+
 
             <Route exact path="/">
               <Home />

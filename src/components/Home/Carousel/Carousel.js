@@ -9,7 +9,7 @@ import slider5 from '../../../images/slider image/carousel-5-min.png'
 const Carousel = () => {
     return (
         <div>
-            <div id="carouselExampleIndicators" className="carousel slide py-5 my-5" style={{ background: "#111430" }} data-ride="carousel">
+            <div id="carouselExampleIndicators" className="carousel slide pl-5 py-5 my-5" style={{ background: "#111430" }} data-ride="carousel">
                 <h3 style={{ fontSize: "2.2rem" }} className="text-center text-white font-weight-bold mb-5 mt-3" > Provide awesome <p style={{ fontSize: "2.2rem" }}  className="text-green font-weight-bold d-inline"> services </p> </h3>
 
                 <ol className="carousel-indicators">
@@ -17,7 +17,7 @@ const Carousel = () => {
                     <li data-target="#carouselExampleIndicators" data-slide-to="1" ></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2" ></li>
                 </ol>
-                <div className="carousel-inner mb-5" style={{ maxHeight: " 500px" }}>
+                <div className="carousel-inner pl-2 mb-5" style={{ maxHeight: " 500px" }}>
                     <div className="carousel-item active">
                         <div className="d-flex">
                             <img src={slider1} className="d-inline-block " style={{ width: "40%", height: "14rem" }} alt="..." />

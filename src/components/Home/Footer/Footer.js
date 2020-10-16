@@ -93,7 +93,7 @@ const Footer = () => {
                     </div>
                 </div>
                 
-                <p className="text-center pt-5"> &copy;  copyright Orange labs 2020 </p>
+                <p className="text-center pt-5"> &copy;  copyright Mainul Islam Faruqi 2020 </p>
             </div>
         </footer>
     );

@@ -1,0 +1,9 @@
+.card-img{
+    display: flex;
+    align-items: center;
+}
+
+.card-header-text{
+    margin-top: 5px;
+    margin-left: 20px;
+}

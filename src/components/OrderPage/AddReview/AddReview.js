@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import OrderSidebar from '../OrderSiderbar/OrderSidebar';
-import './Review.css';
+import './AddReview.css';
 
 const Review = () => {
 
@@ -14,7 +14,9 @@ const Review = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-       
+
+        review.picture = loggedInUser.picture;
+        
         fetch('http://localhost:5000/addReview', {
             method: 'POST',
             headers: {"content-type":"application/json"},
@@ -22,20 +24,24 @@ const Review = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 history.push('/')
             })
             .catch(err => console.log(err))
     }
 
 
+
+
     const handleChange = (e) => {
         const newReview = { ...review };
-        newReview["name"] = loggedInUser.name;
+        if(newReview.name === undefined){
+            newReview['name'] = loggedInUser.name;
+        }
         newReview[e.target.name] = e.target.value;
         setReview(newReview);
     }
 
+    console.log(review)
 
 
     return (

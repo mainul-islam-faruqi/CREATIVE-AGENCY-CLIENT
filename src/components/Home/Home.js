@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './Carousel/Carousel';
+import FeedBack from './FeedBack/FeedBack';
 import Header from './Header/Header';
 import ImageRow from './ImageRow/ImageRow';
 import Services from './Services/Services';
@@ -11,6 +12,7 @@ const Home = () => {
             <ImageRow/>
             <Services/>
             <Carousel/>
+            <FeedBack />
         </div>
     );
 };

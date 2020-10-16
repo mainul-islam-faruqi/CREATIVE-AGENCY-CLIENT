@@ -16,7 +16,7 @@ import OrderList from './components/OrderPage/OrderList/OrderList';
 
 import jwt_decode from "jwt-decode";
 import { useEffect } from 'react';
-import Review from './components/OrderPage/Review/Review';
+import Review from './components/OrderPage/AddReview/AddReview';
 
 export const UserContext = createContext();
 

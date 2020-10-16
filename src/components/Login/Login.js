@@ -10,6 +10,8 @@ import "firebase/auth";
 import firebaseConfig from "./firebase.config";
 import { useContext } from 'react';
 
+import jwt_decode from "jwt-decode";
+
 const Login = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -25,8 +27,9 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(result => {
-            const {displayName, email} = result.user;
-            const signedInUser = {name: displayName, email}
+            const {displayName, email, photoURL} = result.user;
+            console.log(result.user)
+            const signedInUser = {name: displayName, email, picture: photoURL}
             setLoggedInUser(signedInUser);
             storeAuthToken();
         }).catch(function(error){

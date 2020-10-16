@@ -4,20 +4,19 @@ import { useHistory } from 'react-router-dom';
 import OrderSidebar from '../OrderSiderbar/OrderSidebar';
 
 import uploadIcon from '../../../images/icons/upload.png';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
 
 
 const Order = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    const [serviceId , setServiceId] = useState([]);
 
     const history = useHistory();
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
 
-
-    const handleChange = (e) => {
-        const newInfo = { ...info };
-        newInfo[e.target.name] = e.target.value;
-        setInfo(newInfo);
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,21 +27,36 @@ const Order = () => {
         formData.append('selectedServiceName', info.selectedServiceName);
         formData.append('description', info.description);
         formData.append('price', info.price);
+        formData.append('serviceId', loggedInUser.serviceId);
 
         fetch('http://localhost:5000/placeOrder', {
             method: 'POST',
-            body: formData
+            body: formData,
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                history.push('/')
+                history.push('/orderList')
             })
             .catch(err => console.log(err))
     }
 
-    console.log(info, file);
 
+
+
+    const handleChange = (e) => {
+
+        let isFieldValid = true;
+        if (e.target.name === 'email') {
+            isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
+        }
+        if (isFieldValid) {
+            const newInfo = { ...info };
+            newInfo[e.target.name] = e.target.value;
+            setInfo(newInfo);
+        }
+    }
+    console.log(info, file);
 
 
     return (
@@ -63,32 +77,34 @@ const Order = () => {
 
                                 <input type="text" name="name"
                                     placeholder="Your name / Company's name" id=""
-                                    onChange={handleChange}
+                                    onChange={handleChange} required
                                 />
 
                                 <input type="email" name="email"
                                     placeholder="Your email address" id=""
                                     onChange={handleChange}
+                                     required
                                 />
 
                                 <input type="text" name="selectedServiceName"
                                     placeholder="selected Service Name " id=""
                                     onChange={handleChange}
+                                    value={loggedInUser.title} required
                                 />
 
                                 <textarea type="text-area" name="description"
                                     placeholder="Enter Description " id=""
-                                    onChange={handleChange}
+                                    onChange={handleChange} required
                                     rows="4" cols="28"
                                 />
 
-                                <div class="form-row inline ">
+                                <div className="form-row inline ">
 
 
-                                    <div class=" form-group col mr-2">
-                                        <input type="number" name="price"class="" placeholder="Price" />
+                                    <div className=" form-group col mr-2">
+                                        <input type="number" name="price"className="" placeholder="Price" onChange={handleChange} required/>
                                     </div>
-                                    <div class="col ml-2">
+                                    <div className="col ml-2">
                                         <div className="uploadFile">
                                             <input
                                                 type="file"

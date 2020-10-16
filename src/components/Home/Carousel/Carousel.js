@@ -10,7 +10,7 @@ const Carousel = () => {
     return (
         <div>
             <div id="carouselExampleIndicators" className="carousel slide py-5 my-5" style={{ background: "#111430" }} data-ride="carousel">
-                <h3 style={{ fontSize: "2.2rem" }} className="text-center text-white font-weight-bold mb-5 mt-3" > Provide awesome <p className="text-green font-weight-bold d-inline"> services </p> </h3>
+                <h3 style={{ fontSize: "2.2rem" }} className="text-center text-white font-weight-bold mb-5 mt-3" > Provide awesome <p style={{ fontSize: "2.2rem" }}  className="text-green font-weight-bold d-inline"> services </p> </h3>
 
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active "></li>

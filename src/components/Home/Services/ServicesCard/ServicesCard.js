@@ -1,13 +1,22 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../../App';
 import './ServicesCard.css';
 
 const ServicesCard = ({ service }) => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+  const handleOrder = ()=> {
+    setLoggedInUser({...loggedInUser, image:service.image, title:service.title, description:service.description, serviceId: service._id  })
+  }
   return (
     
       <div className="col col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 ">
-        <Link className="link-primary" to="/order">
-        <div className="card d-flex align-items-center justify-content-center service-card py-4">
+        <Link className="link-primary" to="/order" onClick={handleOrder}>
+        <div className="card d-flex align-items-center justify-content-center service-card py-4"
+        
+        >
 
           <div className="card-img" style={{ width: "100px", height: "100px" }} >
             {

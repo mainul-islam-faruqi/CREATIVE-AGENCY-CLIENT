@@ -20,7 +20,7 @@ const Services = () => {
         <section className="services container-fluid mt-5 mb-5 p-5 ">
             <div className="container-fluid">
 
-                <h3 style={{fontSize: "2.2rem"}} className="text-center font-weight-bold" > Provide awesome <p className="text-green font-weight-bold d-inline"> services </p> </h3>
+                <h3 style={{fontSize: "2.2rem"}} className="text-center font-weight-bold" > Provide awesome <p style={{ fontSize: "2.2rem" }}  className="text-green font-weight-bold d-inline"> services </p> </h3>
                 <div className="row row-cols-1  mt-5 pt-5">
                     {
                         services.map(service => <ServicesCard key={service._id} service={service} />)

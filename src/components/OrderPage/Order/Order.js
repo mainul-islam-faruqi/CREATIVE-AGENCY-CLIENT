@@ -42,8 +42,6 @@ const Order = () => {
     }
 
 
-
-
     const handleChange = (e) => {
 
         let isFieldValid = true;

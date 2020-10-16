@@ -7,7 +7,6 @@ import OrderListCard from './OrderListCard/OrderListCard';
 const OrderList = () => {
     const [loggedInUser,setLoggedInUser] = useContext(UserContext);
     const [orderList, setOrderList] = useState([]);
-    console.log(loggedInUser.email)
 
     useEffect(()=> {
         fetch('http://localhost:5000/getUserOrderList', {
@@ -19,11 +18,8 @@ const OrderList = () => {
         .then(res => res.json())
         .then(data => {
             setOrderList(data);
-            console.log(data)
         })
     },[loggedInUser.email])
-
-    console.log(orderList);
 
 
     return (

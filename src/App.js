@@ -17,6 +17,7 @@ import OrderList from './components/OrderPage/OrderList/OrderList';
 import jwt_decode from "jwt-decode";
 import { useEffect } from 'react';
 import Review from './components/OrderPage/AddReview/AddReview';
+import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 
 export const UserContext = createContext();
 
@@ -60,7 +61,7 @@ function App() {
             <Route  path="/review">
               <Review/>
             </Route>
-            
+
             <Route path="/admin">
               <Admin />
             </Route>
@@ -69,7 +70,9 @@ function App() {
               <AddService />
             </Route>
 
-            
+            <Route path="/makeAdmin">
+              <MakeAdmin/>
+            </Route>
 
 
             <Route exact path="/">

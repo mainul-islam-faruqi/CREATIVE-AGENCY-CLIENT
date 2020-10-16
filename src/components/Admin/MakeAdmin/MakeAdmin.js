@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './MakeAdmin.css';
 import Sidebar from '../../Shared/Sidebar/Sidebar';
-import uploadIcon from '../../../images/icons/upload.png';
 import { useHistory } from 'react-router-dom';
 
 const MakeAdmin = () => {

@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 import { Redirect, Route } from 'react-router-dom';
 
 const PrivateRoute = ({children, ...rest}) => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser] = useContext(UserContext);
     const isLoggedIn = () => {
         const token = sessionStorage.getItem('token');
         if(!token){

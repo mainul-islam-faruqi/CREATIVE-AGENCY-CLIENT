@@ -5,7 +5,7 @@ import OrderSidebar from '../OrderSiderbar/OrderSidebar';
 import OrderListCard from './OrderListCard/OrderListCard';
 
 const OrderList = () => {
-    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser] = useContext(UserContext);
     const [orderList, setOrderList] = useState([]);
 
     useEffect(()=> {

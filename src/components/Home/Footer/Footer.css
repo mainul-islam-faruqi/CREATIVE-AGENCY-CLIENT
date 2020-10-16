@@ -1,0 +1,11 @@
+.footer{
+    background: #FBD062;
+}
+
+.footer-form{
+    width: 80% !important;
+}
+
+.footer-form .form-group input, textarea{
+    width: 100% !important;
+}

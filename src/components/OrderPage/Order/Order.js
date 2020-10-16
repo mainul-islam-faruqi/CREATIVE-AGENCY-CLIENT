@@ -23,8 +23,8 @@ const Order = () => {
         const formData = new FormData();
         formData.append('file', file);
         formData.append('name', info.name);
-        formData.append('email', info.email);
-        formData.append('selectedServiceName', info.selectedServiceName);
+        formData.append('email', loggedInUser.email);
+        formData.append('selectedServiceName', loggedInUser.title);
         formData.append('description', info.description);
         formData.append('price', info.price);
         formData.append('serviceId', loggedInUser.serviceId);
@@ -54,8 +54,7 @@ const Order = () => {
             setInfo(newInfo);
         }
     }
-    console.log(info, file);
-
+console.log(info);
 
     return (
         <div className="container-fluid">
@@ -81,19 +80,21 @@ const Order = () => {
                                 <input type="email" name="email"
                                     placeholder="Your email address" id=""
                                     onChange={handleChange}
+                                    defaultValue={loggedInUser.email}
                                      required
                                 />
 
                                 <input type="text" name="selectedServiceName"
                                     placeholder="selected Service Name " id=""
                                     onChange={handleChange}
-                                    value={loggedInUser.title} required
+                                    defaultValue={loggedInUser.title} required
                                 />
 
                                 <textarea type="text-area" name="description"
                                     placeholder="Enter Description " id=""
                                     onChange={handleChange} required
                                     rows="4" cols="28"
+                                    className="order-text-area"
                                 />
 
                                 <div className="form-row inline ">

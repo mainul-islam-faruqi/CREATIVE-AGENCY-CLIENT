@@ -66,10 +66,9 @@ const AddService = () => {
                             />
 
                             <h5> Description </h5>
-                            <textarea  type="text-area" name="description"
+                            <textarea  type="textArea" name="description"
                                 placeholder="Enter Description " id=""
                                 onChange={handleChange}
-                                rows="4" cols="28"
                             />
                         </div>
 

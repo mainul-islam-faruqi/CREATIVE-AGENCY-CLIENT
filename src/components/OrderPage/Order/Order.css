@@ -2,7 +2,7 @@
     width: 70%;
 }
 
-.order-form input, textarea {
+.order-form input, .order-text-area {
     width: 90%;
     height: 50px;
     margin:  10px 30px;

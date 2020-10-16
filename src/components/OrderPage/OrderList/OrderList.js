@@ -13,7 +13,6 @@ const OrderList = () => {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({  email: loggedInUser.email})
-            
         })
         .then(res => res.json())
         .then(data => {
@@ -21,7 +20,7 @@ const OrderList = () => {
         })
     },[loggedInUser.email])
 
-
+console.log(orderList)
     return (
         <div className="container-fluid">
             <div className="row pt-3">

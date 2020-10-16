@@ -9,7 +9,7 @@ const Admin = () => {
     const [allOrderList, setAllOrderList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/all-oreder-list')
+        fetch('http://localhost:5000/all-order-list')
             .then(res => res.json())
             .then(data => {
                 setAllOrderList(data)

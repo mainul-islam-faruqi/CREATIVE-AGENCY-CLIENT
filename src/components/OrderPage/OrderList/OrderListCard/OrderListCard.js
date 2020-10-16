@@ -21,24 +21,26 @@ const OrderListCard = ({orderListItem}) => {
 
     return (
         <div className="col col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-4 ">
-        { selectedOrder._id && <Link className="link-primary" to="/order">
-        <div className="card d-flex align-items-center justify-content-center service-card py-4">
+        { selectedOrder._id && 
+        <div className="card  service-card py-4">
 
-          <div className="card-img" style={{ width: "100px", height: "100px" }} >
+          <div className="card-img d-flex justify-content-between" >
             {
-              selectedOrder.image ? <img style={{ width: "100px", height: "100px" }} src={`data:image/png;base64,${selectedOrder.image.img}`} alt="loading Failed" />
+              selectedOrder.image ? <img style={{ width: "74px", height: "74px", marginLeft: "20px" }} src={`data:image/png;base64,${selectedOrder.image.img}`} alt="loading Failed" />
                 : " "
             }
+
+            <button className="button-pending "  style={{position: "absolute", right: "20px" , marginLeft: "20px !important"}} > Pending  </button>
           </div>
 
 
-          <div className="card-body text-center">
+          <div className="card-body text-left">
             <h5 className="card-title font-weight-bolder"> { selectedOrder.title } </h5>
             <p className="card-text text-light-dark"> {selectedOrder.description} </p>
           </div>
 
         </div>
-        </Link>}
+       }
       </div>
     );
 };

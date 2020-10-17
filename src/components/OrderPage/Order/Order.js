@@ -13,7 +13,7 @@ const Order = () => {
 
 
     const history = useHistory();
-    const [info, setInfo] = useState({});
+    const [info, setInfo] = useState({status: 'pending'});
     const [file, setFile] = useState(null);
 
 
@@ -22,13 +22,14 @@ const Order = () => {
         const formData = new FormData();
         formData.append('file', file);
         formData.append('name', info.name);
-        formData.append('email', loggedInUser.email);
+        formData.append('email', info.email);
         formData.append('selectedServiceName', loggedInUser.title);
         formData.append('description', info.description);
         formData.append('price', info.price);
         formData.append('serviceId', loggedInUser.serviceId);
+        formData.append('status', info.status);
 
-        fetch('https://aqueous-mountain-26751.herokuapp.com/placeOrder', {
+        fetch('http://localhost:5000/placeOrder', {
             method: 'POST',
             body: formData,
         })
@@ -46,7 +47,7 @@ const Order = () => {
         let isFieldValid = true;
         if (isFieldValid) {
             const newInfo = { ...info };
-            
+
             if(newInfo.email === undefined){
                 newInfo['email'] = loggedInUser.email;
             }

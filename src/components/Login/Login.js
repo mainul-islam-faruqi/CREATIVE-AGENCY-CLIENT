@@ -43,7 +43,7 @@ const Login = () => {
         firebase.auth().currentUser.getIdToken(true)
         .then(function(idToken){
             sessionStorage.setItem('token', idToken);
-            history.replace(from) || history.push('/');
+            history.replace(from);
         }).catch(function(error){
             console.log(error)
         })

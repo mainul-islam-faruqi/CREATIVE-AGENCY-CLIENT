@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+import { useContext } from 'react';
 import { useEffect } from 'react';
+import { UserContext } from '../../App';
 import Sidebar from '../Shared/Sidebar/Sidebar';
 import './Admin.css';
-
 import AdminServiceTable from './AdminServiceTable/AdminServiceTable';
 
 
 const Admin = () => {
 
+    const [loggedInUser] = useContext(UserContext);
+
     const [allOrderList, setAllOrderList] = useState([]);
-    
+
     useEffect(() => {
         fetch('https://aqueous-mountain-26751.herokuapp.com/all-order-list')
             .then(res => res.json())
@@ -27,8 +30,13 @@ const Admin = () => {
                 </div>
 
                 <div className=" col-sm-12 col-md-12 col-lg-9">
-                    <div className="header-option ml-5">
+                    <div className="header-option d-flex justify-content-between  ml-5 ">
                         <h4 className=" text-brand ">  Service list </h4>
+                        <div className="d-flex align-items-center mt-3 mr-5">
+                            <img src={loggedInUser.picture} style={{ width: "54px", height: "54px", marginTop: "" }} className="card-img-top rounded-circle" alt="..." />
+                            <h5 className="text-brand"> {loggedInUser.name} </h5>
+                        </div>
+
                     </div>
 
                     <div className="rightOption ">

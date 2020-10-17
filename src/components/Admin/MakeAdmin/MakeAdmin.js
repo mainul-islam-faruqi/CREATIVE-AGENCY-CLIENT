@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './MakeAdmin.css';
 import Sidebar from '../../Shared/Sidebar/Sidebar';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
 const MakeAdmin = () => {
+
+    const [loggedInUser] = useContext(UserContext);
     const history = useHistory();
     const [adminInfo, setAdminInfo] = useState({});
 
@@ -39,8 +42,12 @@ const MakeAdmin = () => {
 
                 <div className="col-md-9">
 
-                    <div className="header-option ml-5">
-                        <h3> Add Service </h3>
+                <div className="header-option d-flex justify-content-between  ml-5 ">
+                        <h4 className=" text-brand ">  Make Admin </h4>
+                        <div className="d-flex align-items-center mt-3 mr-5">
+                            <img src={loggedInUser.picture} style={{ width: "54px", height: "54px", marginTop: "" }} className="card-img-top rounded-circle" alt="..." />
+                            <h5 className="text-brand"> {loggedInUser.name} </h5>
+                        </div>
                     </div>
                     <div className="rightOption ">
 

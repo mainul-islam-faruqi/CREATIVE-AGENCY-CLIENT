@@ -16,7 +16,7 @@ const Footer = () => {
 
         review.picture = loggedInUser.picture;
 
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://aqueous-mountain-26751.herokuapp.com/addReview', {
             method: 'POST',
             headers: { "content-type": "application/json" },
             body: JSON.stringify(review)
@@ -69,7 +69,7 @@ const Footer = () => {
                                     placeholder=" Your message " id=""
                                     onChange={handleChange} required
                                     rows="4" cols="38"
-                                    className="order-text-area"
+                                    className="order-text-area footer-text-area"
                                     style={{ height: " 160px", paddingTop: "15px" }}
                                 />
 

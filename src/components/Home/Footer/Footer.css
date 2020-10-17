@@ -6,6 +6,6 @@
     width: 80% !important;
 }
 
-.footer-form .form-group input, textarea{
+.footer-form .form-group input, .footer-text-area{
     width: 100% !important;
 }

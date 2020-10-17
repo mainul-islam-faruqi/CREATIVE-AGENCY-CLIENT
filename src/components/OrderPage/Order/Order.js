@@ -9,9 +9,8 @@ import { UserContext } from '../../../App';
 
 
 const Order = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser] = useContext(UserContext);
 
-    const [serviceId , setServiceId] = useState([]);
 
     const history = useHistory();
     const [info, setInfo] = useState({});
@@ -29,7 +28,7 @@ const Order = () => {
         formData.append('price', info.price);
         formData.append('serviceId', loggedInUser.serviceId);
 
-        fetch('http://localhost:5000/placeOrder', {
+        fetch('https://aqueous-mountain-26751.herokuapp.com/placeOrder', {
             method: 'POST',
             body: formData,
         })
@@ -45,11 +44,13 @@ const Order = () => {
     const handleChange = (e) => {
 
         let isFieldValid = true;
-        if (e.target.name === 'email') {
-            isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
-        }
         if (isFieldValid) {
             const newInfo = { ...info };
+            
+            if(newInfo.email === undefined){
+                newInfo['email'] = loggedInUser.email;
+            }
+
             newInfo[e.target.name] = e.target.value;
             setInfo(newInfo);
         }
@@ -103,7 +104,7 @@ console.log(info);
                                     <div className=" form-group col mr-2">
                                         <input type="number" name="price"className="" placeholder="Price" onChange={handleChange} required/>
                                     </div>
-                                    <div className="col ml-2">
+                                    <div className="col ml-2 ">
                                         <div className="uploadFile">
                                             <input
                                                 type="file"
@@ -115,8 +116,6 @@ console.log(info);
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
 
                             <div className="" style={{ width: " 170px", }}>

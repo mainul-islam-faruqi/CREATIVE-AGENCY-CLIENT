@@ -9,7 +9,7 @@ const Admin = () => {
     const [allOrderList, setAllOrderList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/all-order-list')
+        fetch('https://aqueous-mountain-26751.herokuapp.com/all-order-list')
             .then(res => res.json())
             .then(data => {
                 setAllOrderList(data)

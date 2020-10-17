@@ -6,7 +6,7 @@ const OrderListCard = ({orderListItem}) => {
     const [selectedOrder, setSelectedOrder] = useState({});
 
     useEffect(()=> {
-        fetch('http://localhost:5000/getOrderedServiceList', {
+        fetch('https://aqueous-mountain-26751.herokuapp.com/getOrderedServiceList', {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({serviceId:orderListItem.serviceId}),

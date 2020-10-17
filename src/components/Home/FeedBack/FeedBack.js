@@ -8,7 +8,7 @@ const FeedBack = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/getRviews')
+        fetch('https://aqueous-mountain-26751.herokuapp.com/getRviews')
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

@@ -17,7 +17,7 @@ const Review = () => {
 
         review.picture = loggedInUser.picture;
         
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://aqueous-mountain-26751.herokuapp.com/addReview', {
             method: 'POST',
             headers: {"content-type":"application/json"},
             body: JSON.stringify(review)

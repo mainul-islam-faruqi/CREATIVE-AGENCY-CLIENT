@@ -10,11 +10,10 @@ import "firebase/auth";
 import firebaseConfig from "./firebase.config";
 import { useContext } from 'react';
 
-import jwt_decode from "jwt-decode";
 
 const Login = () => {
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [ loggedInUser, setLoggedInUser] = useContext(UserContext);
     const history = useHistory();
     const location = useLocation();
 
@@ -44,17 +43,18 @@ const Login = () => {
         firebase.auth().currentUser.getIdToken(true)
         .then(function(idToken){
             sessionStorage.setItem('token', idToken);
-            history.replace(from);
+            history.replace(from) || history.push('/');
         }).catch(function(error){
             console.log(error)
         })
     }
 
     return (
-        <div className="login">
+        <div className="container-fluid">
+            <div className="login">
             <Link to="/" className="logo mb-5"> <img  src={logo} alt="" /> </Link>
 
-            <form className="login-form" action="">
+            <form className=" container login-form px-4" action="">
                 <h2 className="text-brand"> Login with </h2>
 
                 <div onClick={handleGoogleSignIn} className="googleLogin">
@@ -66,6 +66,7 @@ const Login = () => {
                     <p> Don't have an account? <Link to="/create-account" style={{ color: "#3F90FC" }}> Create an account </Link></p>
                 </div>
             </form>
+        </div>
         </div>
     );
 };

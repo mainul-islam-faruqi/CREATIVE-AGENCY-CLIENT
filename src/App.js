@@ -30,16 +30,34 @@ function App() {
       const token = sessionStorage.getItem('token');
       if(token){
         const decodedToken = jwt_decode(token);
-        console.log(decodedToken)
         const {email, name, picture} = decodedToken;
         const loggedInData = {email, name, picture};
         setLoggedInUser(loggedInData);
       }
   }
   userData();
-  },[])
- 
 
+
+  },[])
+
+
+  useEffect(()=> {
+    loggedInUser.email && fetch('http://localhost:5000/getAdmin?email='+loggedInUser.email,{
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data[0]);
+      const adminData = data[0]
+      console.log(adminData)
+      setLoggedInUser({...loggedInUser , adminEmail: adminData?.email})
+    })
+  }, [loggedInUser.email])
+ 
+console.log(loggedInUser)
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>

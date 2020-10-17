@@ -31,7 +31,7 @@ const AdminServiceTable = ({ singleOrder }) => {
                 <th scope="row"> {singleOrder.name} </th>
                 <th > {singleOrder.email} </th>
                 <th> {singleOrder.selectedServiceName} </th>
-                <th style={{ fontSize: ".8rem" }}> {singleOrder.description.substring(0,70)} </th>
+                <th style={{ fontSize: ".8rem" }}> {singleOrder.description.substring(0,60)} </th>
 
                 {status === "pending" && <Form.Control as="select" className={`text-${status}`} custom onChange={onChangeStatusHandler}>
                     <option style={{ color: '#FF4545' }} > Pending </option>

@@ -69,28 +69,28 @@ console.log(loggedInUser)
               <Login></Login>
             </Route>
             <PrivateRoute path="/order" >
-              <Order />
+              {!loggedInUser.adminEmail && <Order />}
             </PrivateRoute>
 
-            <Route path="/orderList">
-              <OrderList/>
-            </Route>
+            <PrivateRoute path="/orderList">
+             {!loggedInUser.adminEmail && <OrderList/>}
+            </PrivateRoute>
 
-            <Route  path="/review">
-              <Review/>
-            </Route>
+            <PrivateRoute  path="/review">
+              { !loggedInUser.adminEmail && <Review/>}
+            </PrivateRoute>
 
-            <Route path="/admin">
-              <Admin />
-            </Route>
+            <PrivateRoute path="/admin">
+             { loggedInUser.adminEmail && <Admin />}
+            </PrivateRoute>
 
-            <Route path="/addService">
-              <AddService />
-            </Route>
+            <PrivateRoute path="/addService">
+             { loggedInUser.adminEmail && <AddService />}
+            </PrivateRoute>
 
-            <Route path="/makeAdmin">
-              <MakeAdmin/>
-            </Route>
+            <PrivateRoute path="/makeAdmin">
+              { loggedInUser.adminEmail && <MakeAdmin/>}
+            </PrivateRoute>
 
 
             <Route exact path="/">

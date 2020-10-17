@@ -117,6 +117,7 @@ const Order = () => {
                                                 accept="image/*"
                                                 className="custom-file-input"
                                                 onChange={(e) => setFile(e.target.files[0])}
+                                                required
                                             />
                                             <div id="uploadImageText" style={{ top: ".85rem" }}> <img className='uploadIcon' src={uploadIcon} alt="" /> Upload project file </div>
                                         </div>

@@ -30,10 +30,11 @@ const Admin = () => {
                 </div>
 
                 <div className=" col-sm-12 col-md-12 col-lg-9">
+
                     <div className="header-option d-flex justify-content-between  ml-5 ">
                         <h4 className=" text-brand ">  Service list </h4>
                         <div className="d-flex align-items-center mt-3 mr-5">
-                            <img src={loggedInUser.picture} style={{ width: "54px", height: "54px", marginTop: "" }} className="card-img-top rounded-circle" alt="..." />
+                            <img src={loggedInUser.picture} style={{ width: "44px", height: "44px", marginTop: "" }} className="card-img-top rounded-circle mr-2" alt="..." />
                             <h5 className="text-brand"> {loggedInUser.name} </h5>
                         </div>
 

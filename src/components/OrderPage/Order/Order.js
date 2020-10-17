@@ -13,7 +13,7 @@ const Order = () => {
 
 
     const history = useHistory();
-    const [info, setInfo] = useState({status: 'pending'});
+    const [info, setInfo] = useState({ status: 'pending' });
     const [file, setFile] = useState(null);
 
 
@@ -48,7 +48,7 @@ const Order = () => {
         if (isFieldValid) {
             const newInfo = { ...info };
 
-            if(newInfo.email === undefined){
+            if (newInfo.email === undefined) {
                 newInfo['email'] = loggedInUser.email;
             }
 
@@ -56,7 +56,7 @@ const Order = () => {
             setInfo(newInfo);
         }
     }
-console.log(info);
+    console.log(info);
 
     return (
         <div className="container-fluid">
@@ -66,8 +66,13 @@ console.log(info);
                 </div>
 
                 <div className="col-md-9">
-                    <div className="header-option ml-5">
-                        <h4 className=" text-brand ">  Order </h4>
+
+                    <div className="header-option d-flex justify-content-between  ml-5 ">
+                        <h4 className=" text-brand ">  Make Order </h4>
+                        <div className="d-flex align-items-center mt-3 mr-5">
+                            <img src={loggedInUser.picture} style={{ width: "44px", height: "44px", marginTop: "" }} className="card-img-top rounded-circle mr-2" alt="..." />
+                            <h5 className="text-brand"> {loggedInUser.name} </h5>
+                        </div>
                     </div>
 
                     <div className="rightOption ">
@@ -83,7 +88,7 @@ console.log(info);
                                     placeholder="Your email address" id=""
                                     onChange={handleChange}
                                     defaultValue={loggedInUser.email}
-                                     required
+                                    required
                                 />
 
                                 <input type="text" name="selectedServiceName"
@@ -103,7 +108,7 @@ console.log(info);
 
 
                                     <div className=" form-group col mr-2">
-                                        <input type="number" name="price"className="" placeholder="Price" onChange={handleChange} required/>
+                                        <input type="number" name="price" className="" placeholder="Price" onChange={handleChange} required />
                                     </div>
                                     <div className="col ml-2 ">
                                         <div className="uploadFile">

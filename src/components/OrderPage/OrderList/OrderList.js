@@ -36,7 +36,7 @@ console.log(orderList)
                     <div className="rightOption ">
                         <div className="row mx-4">
                             {
-                                orderList.map(item => <OrderListCard key={item._id} orderListItem={item} />)
+                                orderList.map(item => <OrderListCard key={item._id} orderListItem={item} status={item.status} />)
                             }
                         </div>
                         

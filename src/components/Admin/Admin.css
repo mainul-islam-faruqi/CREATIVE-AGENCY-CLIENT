@@ -11,3 +11,9 @@
     flex: 1;
     padding-top: 20px;
 }
+
+.custom-select{
+    min-width: 80px;
+    border: none;
+}
+

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 
-const OrderListCard = ({orderListItem}) => {
+const OrderListCard = ({orderListItem, status}) => {
 
     const [selectedOrder, setSelectedOrder] = useState({});
 
@@ -29,7 +29,7 @@ const OrderListCard = ({orderListItem}) => {
                 : " "
             }
 
-            <button className="button-pending "  style={{position: "absolute", right: "20px" , marginLeft: "20px !important"}} > Pending  </button>
+            <button className={`button-${status.toLowerCase()}`}  style={{position: "absolute", right: "20px" , marginLeft: "20px !important"}} > {status}  </button>
           </div>
 
 

@@ -21,6 +21,17 @@
   color: #8f8f8f;
 }
 
+.text-pending{
+  color: #FF4545 !important;
+}
+
+.text-ongoing{
+  color: #FFBD3E !important;
+}
+
+.text-done{
+  color: #009444 !important;
+}
 
 .button-primary{
   background-color: #20232A;
@@ -35,13 +46,38 @@
 .button-pending{
   background-color: #FFE3E3;
   color: #FF4545 !important;
-  height: 2.5rem;
+  height: 2.3rem;
   text-align: center;
   border: none;
   border-radius: 5px;
   text-decoration: none;
   padding: 0 20px;
 }
+
+.button-done{
+  background-color: #C6FFE0;
+  color: #009444 !important;
+  height: 2.3rem;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+
+.button-ongoing{
+  background-color: #fff1d6;
+  color: #e99700 !important;
+  height: 2.3rem;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+
 
 .link-primary{
   color: inherit;

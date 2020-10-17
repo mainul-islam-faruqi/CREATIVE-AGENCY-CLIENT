@@ -3,11 +3,13 @@ import { useEffect } from 'react';
 import Sidebar from '../Shared/Sidebar/Sidebar';
 import './Admin.css';
 
+import AdminServiceTable from './AdminServiceTable/AdminServiceTable';
+
 
 const Admin = () => {
 
     const [allOrderList, setAllOrderList] = useState([]);
-
+    
     useEffect(() => {
         fetch('https://aqueous-mountain-26751.herokuapp.com/all-order-list')
             .then(res => res.json())
@@ -15,6 +17,8 @@ const Admin = () => {
                 setAllOrderList(data)
             })
     }, [])
+
+
     return (
         <div className="container-fluid">
             <div className="row pt-3">
@@ -28,7 +32,7 @@ const Admin = () => {
                     </div>
 
                     <div className="rightOption ">
-                        <div className=" bg-white pt-5 pl-4 pr-4 m-4 " style={{ borderRadius: "20px", minHeight: "150px" }} >
+                        <div className=" bg-white pt-5 pl-4 pr-4 m-4 table-responsive-sm" style={{ borderRadius: "20px", minHeight: "150px" }} >
                             <table className="table table-borderless ">
                                 <thead style={{ background: "#F5F6FA", borderRadius: "10px", margin: "10px", color: "#686868", width: "100%" }} >
 
@@ -42,24 +46,8 @@ const Admin = () => {
                                 </thead>
 
                                 {
-                                    allOrderList.map(item =>
-                                        <tbody key={item._id}>
-                                            <tr>
-                                                <th scope="row"> {item.name} </th>
-                                                <th > {item.email} </th>
-                                                <th> {item.selectedServiceName} </th>
-                                                <th style={{ fontSize: ".8rem" }}> {item.description} </th>
-
-                                                <div class="">
-                                                <select name="dropdown" id="status" className="" style={{border: "none"}}>
-                                                    <option className=" text-danger" value="pending">pending</option>
-                                                    <option className=" text-success" value="Done">Done</option>
-                                                    <option className=" text-warning" value="On going">On going</option>
-                                                </select>
-                                                </div>
-                                             
-                                            </tr>
-                                        </tbody>
+                                    allOrderList.map(singleOrder =>
+                                        <AdminServiceTable key={singleOrder._id} singleOrder={singleOrder} />
                                     )
                                 }
                             </table>

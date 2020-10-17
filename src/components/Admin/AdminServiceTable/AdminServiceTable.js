@@ -11,7 +11,7 @@ const AdminServiceTable = ({ singleOrder }) => {
     console.log(status)
     const onChangeStatusHandler = (e) => {
         setStatus(e.target.value.toLowerCase());
-        fetch('http://localhost:5000/update-status', {
+        fetch('https://aqueous-mountain-26751.herokuapp.com/update-status', {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

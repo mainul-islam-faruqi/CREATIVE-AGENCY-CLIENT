@@ -42,7 +42,7 @@ function App() {
 
 
   useEffect(()=> {
-    loggedInUser.email && fetch('http://localhost:5000/getAdmin?email='+loggedInUser.email,{
+    loggedInUser.email && fetch('https://aqueous-mountain-26751.herokuapp.com/getAdmin?email='+loggedInUser.email,{
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

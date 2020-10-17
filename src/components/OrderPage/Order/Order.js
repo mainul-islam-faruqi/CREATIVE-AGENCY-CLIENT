@@ -29,7 +29,7 @@ const Order = () => {
         formData.append('serviceId', loggedInUser.serviceId);
         formData.append('status', info.status);
 
-        fetch('http://localhost:5000/placeOrder', {
+        fetch('https://aqueous-mountain-26751.herokuapp.com/placeOrder', {
             method: 'POST',
             body: formData,
         })

@@ -12,7 +12,7 @@ const ServicesCard = ({ service }) => {
   }
   return (
     
-      <div className="col col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4 ">
+      <div className="col col-xs-12 col-sm-12 col-md-6 col-lg-4 mb-4">
         <Link className="link-primary" to="/order" onClick={handleOrder}>
         <div className="card d-flex align-items-center justify-content-center service-card py-4"
         

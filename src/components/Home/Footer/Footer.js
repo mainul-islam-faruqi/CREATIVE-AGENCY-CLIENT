@@ -43,14 +43,14 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <div className=" container-fluid py-5 px-5 pl-5">
+            <div className=" container-fluid py-5 px-md-5 pl-md-5">
                 <div className="row">
-                    <div className="col-md-5 col-sm-12 ml-5">
+                    <div className="col-md-5 col-sm-12 ml-md-5 p-sm-4 pl-sm-5">
                         <h3 style={{ fontSize: "2.2rem" }} className="  font-weight-bold mb-3 mt-3" > Let us handle your <br /> project, professionally.</h3>
                         <p> With well written codes, we build amazing apps for all platforms, mobile and web apps in general.</p>
                     </div>
                     <div className="col-md-6 col-sm-12 ">
-                        <form onSubmit={handleSubmit} className="order-form footer-form" action="" >
+                        <form onSubmit={handleSubmit} className="order-form footer-form " action="" >
                             <div className="form-group">
 
 

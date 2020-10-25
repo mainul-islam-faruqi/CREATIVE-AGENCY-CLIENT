@@ -19,7 +19,7 @@ const FeedBack = () => {
         <div className="container-fluid">
                 <h3 style={{ fontSize: "2.2rem" }} className="text-center  font-weight-bold mb-5 mt-3" > Clients <p style={{ fontSize: "2.2rem" }}  className="text-green font-weight-bold d-inline"> Feedback </p> </h3>
 
-            <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 my-5 py-5 px-5 mx-3">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 my-5 py-5 px-md-5 mx-md-3">
 
                 {
                     reviews.map(review =>

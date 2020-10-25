@@ -33,7 +33,7 @@ const Admin = () => {
 
                     <div className="header-option d-flex justify-content-between  ml-5 ">
                         <h4 className=" text-brand ">  Service list </h4>
-                        <div className="d-flex align-items-center mt-3 mr-5">
+                        <div className="d-flex align-items-center mt-3 mr-5 ">
                             <img src={loggedInUser.picture} style={{ width: "44px", height: "44px", marginTop: "" }} className="card-img-top rounded-circle mr-2" alt="..." />
                             <h5 className="text-brand"> {loggedInUser.name} </h5>
                         </div>
@@ -41,16 +41,18 @@ const Admin = () => {
                     </div>
 
                     <div className="rightOption ">
-                        <div className=" bg-white pt-5 pl-4 pr-4 m-4 table-responsive-sm" style={{ borderRadius: "20px", minHeight: "150px" }} >
+                        <div className=" bg-white pt-5 pl-4 pr-4 m-4 table-responsive-sm" style={{ borderRadius: "20px",  minHeight: "150px" }} >
                             <table className="table table-borderless ">
-                                <thead style={{ background: "#F5F6FA", borderRadius: "10px", margin: "10px", color: "#686868", width: "100%" }} >
-
+                                <thead >
                                     <tr >
-                                        <td scope="col">Name/Company</td>
-                                        <td scope="col">Email ID</td>
-                                        <td scope="col">Service</td>
-                                        <td scope="col"> Project Details </td>
-                                        <td scope="col">Status</td>
+                                        {/* <div className="table-header"> */}
+                                            <th scope="col">Name/Company</th>
+                                            <th scope="col">Email ID</th>
+                                            <th scope="col">Service</th>
+                                            <th scope="col"> Project Details </th>
+                                            <th scope="col">Status</th>
+                                        {/* </div> */}
+                                        
                                     </tr>
                                 </thead>
 

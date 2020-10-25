@@ -39,7 +39,7 @@ const OrderList = () => {
                     </div>
 
                     <div className="rightOption ">
-                        <div className="row mx-4">
+                        <div className="row row-cols-1 mx-4">
                             {
                                 orderList.map(item => <OrderListCard key={item._id} orderListItem={item} status={item.status} />)
                             }

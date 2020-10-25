@@ -28,10 +28,10 @@ const AdminServiceTable = ({ singleOrder }) => {
     return (
         <tbody >
             <tr>
-                <th scope="row"> {singleOrder.name} </th>
-                <th > {singleOrder.email} </th>
-                <th> {singleOrder.selectedServiceName} </th>
-                <th style={{ fontSize: ".8rem" }}> {singleOrder.description.substring(0,60)} </th>
+                <td scope="row"> {singleOrder.name} </td>
+                <td > {singleOrder.email} </td>
+                <td> {singleOrder.selectedServiceName} </td>
+                <td > {singleOrder.description.substring(0,60)} </td>
 
                 {status === "pending" && <Form.Control as="select" className={`text-${status}`} custom onChange={onChangeStatusHandler}>
                     <option style={{ color: '#FF4545' }} > Pending </option>

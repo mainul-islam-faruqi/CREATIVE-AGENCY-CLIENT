@@ -9,3 +9,24 @@
 .footer-form .form-group input, .footer-text-area{
     width: 100% !important;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+    .footer-form{
+        width: 94% !important;
+    }
+
+    .footer-form  .form-group  input {
+        margin-left: 10px !important;
+    }
+
+
+    .footer-form  .form-group   textarea{
+        margin-left: 10px !important
+    }
+    
+
+  }
